@@ -7,7 +7,6 @@
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -75,56 +74,38 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 @media screen and (min-width: 70em) {
   .header {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 15% 85%;
     grid-template-columns: 15% 85%;
   }
-
   .header__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
-
   .header__items li {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    align-self: center;
+    flex: 1;
   }
-
   .header__link {
     text-align: center;
   }
-
   .main {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 4fr 20px 1fr;
     grid-template-columns: 4fr 1fr;
-    -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
 }
 @media screen and (min-width: 40em) {
   .content {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 20px 4fr;
     grid-template-columns: 1fr 4fr;
-    -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
 }
 .wrapper {
   width: 90%;
   margin: 0 auto;
-  background-color: #D5D5D5;
+  background-color: #a86262;
 }
 
 .header {
@@ -161,7 +142,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1em;
 }
 .content__items {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
   gap: 10px;
@@ -209,22 +189,16 @@ h1, h2, h3, h4, h5, h6 {
 .areas {
   margin-bottom: 50px;
   background: #eee;
-  display: -ms-grid;
   display: grid;
   gap: 20px;
-  -ms-grid-columns: minmax(200px, 1fr) 20px 2fr;
-      grid-template: auto/minmax(200px, 1fr) 2fr;
-      grid-template-areas: "header header" "sidebar content" "sidebar block" "footer footer";
+  grid-template: auto/minmax(200px, 1fr) 2fr;
+  grid-template-areas: "header header" "sidebar content" "sidebar block" "footer footer";
 }
 .areas__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .areas__list li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 .areas__item {
   background-color: #B9B1B1;
@@ -235,65 +209,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 .areas__item:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: header;
 }
 .areas__item:nth-child(2) {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
   grid-area: sidebar;
 }
 .areas__item:nth-child(3) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
   grid-area: content;
 }
 .areas__item:nth-child(4) {
-  -ms-grid-row: 5;
-  -ms-grid-column: 3;
   grid-area: block;
 }
 .areas__item:nth-child(5) {
-  -ms-grid-row: 7;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: footer;
 }
 
 @media screen and (max-width: 60em) {
   .areas {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 2fr;
-        grid-template: auto/1fr 2fr;
-        grid-template-areas: "header header" "sidebar content" "sidebar content" "block footer";
-  }
-  .areas__item:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-  }
-  .areas__item:nth-child(2) {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-  }
-  .areas__item:nth-child(3) {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 2;
-  }
-  .areas__item:nth-child(4) {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-  }
-  .areas__item:nth-child(5) {
-    -ms-grid-row: 4;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
+    grid-template: auto/1fr 2fr;
+    grid-template-areas: "header header" "sidebar content" "sidebar content" "block footer";
   }
 }
 .items__container {
@@ -301,7 +236,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 .items__body {
-  display: -ms-grid;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
